@@ -1,0 +1,56 @@
+tuxpaint-config
+------------------------------------------
+Tux Paint is a free, award-winning drawing program for children ages 3 
+to 12 (for example, preschool and K-6 in the US, key stages 1 & 2 in the 
+UK). It combines an easy-to-use interface, fun sound effects, and an 
+encouraging cartoon mascot who guides children as they use the program.
+
+This is a graphical configuration program for Tux Paint. It can be used 
+to create a configuration file for Tux Paint, rather than doing it 
+manually by editing the configuration file in a text edtior.
+
+Runtime requirements:
+  cygwin-1.7.0-64
+  libfltk1.1-1.1.9-10
+  libgcc1-4.3.4-1
+  libintl8-0.17-11
+  libstdc++6-4.3.4-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gcc4-core-4.3.4-1
+  gcc4-g++-4.3.4-1
+  gettext-devel-0.17-11
+  make-3.81-2
+
+Canonical website:
+  http://www.tuxpaint.org/
+
+Canonical download:
+  http://sourceforge.net/projects/tuxpaint/files
+
+-------------------------------------------
+
+Build instructions:
+  unpack tuxpaint-config-0.0.12-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./tuxpaint-config-0.0.12-X.cygport all
+
+This will create:
+  /usr/src/tuxpaint-config-0.0.12-X-src.tar.bz2
+  /usr/src/tuxpaint-config-0.0.12-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 0.0.12-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
