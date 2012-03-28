@@ -1,5 +1,5 @@
 category: Graphics
-requires: libfltk1.1 libgcc1 libintl8 libpaper1 libstdc++6
+requires: libfltk1.3 libgcc1 libintl8 libpaper1 libstdc++6
 sdesc: "Drawing program for children (configuration manager)"
 ldesc: "Tux Paint is a free, award-winning drawing program for children 
 ages 3 to 12 (for example, preschool and K-6 in the US, key stages 1 & 2 
