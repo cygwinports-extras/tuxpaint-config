@@ -1,0 +1,38 @@
+NAME="tuxpaint-config"
+VERSION=0.0.12
+RELEASE=2
+CATEGORY="Graphics"
+SUMMARY="Drawing program for children (configuration manager)"
+DESCRIPTION="Tux Paint is a free, award-winning drawing program for children
+ages 3 to 12 (for example, preschool and K-6 in the US, key stages 1 & 2 in
+the UK). It combines an easy-to-use interface, fun sound effects, and an
+encouraging cartoon mascot who guides children as they use the program.
+
+This is a graphical configuration program for Tux Paint. It can be used to
+create a configuration file for Tux Paint, rather than doing it manually by
+editing the configuration file in a text editor."
+HOMEPAGE="http://www.tuxpaint.org/"
+SRC_URI="mirror://sourceforge/tuxpaint/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="0.0.12-exeext.patch"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake -j1 \
+		PREFIX=/usr \
+		EXE_EXT=.exe \
+		CFLAGS="${CFLAGS}" \
+		ARCH_LINKS="-lintl"
+}
+
+src_install() {
+	cd ${B}
+	dodir /usr/bin /usr/share/icons/hicolor/{16x16,32x32,48x48}/apps
+
+	cyginstall -j1 \
+		PREFIX=${D}/usr \
+		EXE_EXT=.exe \
+		GNOME_PREFIX=${D}/usr/ \
+		KDE_ICON_PREFIX=${D}/usr/share/icons/ \
+		X11_ICON_PREFIX=${D}/usr/share/pixmaps/
+}
